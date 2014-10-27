@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app = "turnToTech">
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="todo.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dosis|Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Philosopher:700' rel='stylesheet' type='text/css'>
+</head>
+<body ng-controller="MainCtrl as ctrl">
+
+
+
+
+<header class=" header">
+   <h1 class="jumboTitle"> TurnToTech ToDo App</h1>
+    <section id="mainOp" class="containerUp">
+        <div ng-click="ctrl.enableAddNew()"  class="btn btnUp">Add New Todos
+
+        </div>
+        <div ng-click="ctrl.showAll()" class="btn btnUp">All</div>
+        <div ng-click="ctrl.showUnComplete()" class="btn btnUp">Uncompleted Todos</div>
+
+
+    </section>
+
+</header>
+
+<div id="main" role="main">
+<section id="addNewTodo" ng-show="ctrl.addingNew" class="addTodoContainer">
+    <input type="text" ng-model="ctrl.newTodo.title" placeholder="title">
+    <input type="text" ng-model="ctrl.newTodo.content" placeholder="body">
+    <button  ng-click="ctrl.addTodo()">Save</button>
+</section>
+
+
+<section class="todosContainer">
+
+    <div ng-repeat="todo in ctrl.items | orderBy: 'created_at':true  " class="container">
+            <div ng-class="todo.done ? 'bucket doneTodo' :'bucket undoneTodo'">
+               <span style="float: right; font-size: 11px">Updated : <span style="color: #ffffff;font-size: 11px"> {{todo.updated_at |date: 'medium' }}</span></span>
+                <h2  class="todoTitle">{{todo.title|| "Todo title"}}</h2>
+                <img ng-class="todo.done ? 'doneImg' : 'undoneImg'" src="{{todo.done ? 'img/done.png' : 'img/undone.png'}}" alt="An image">
+                <p class="todoBody">{{todo.content}}</p>
+                <div class="todoShortInfo">Created at : {{todo.created_at | date: 'medium'}}</div>
+            </div>
+
+            <aside class="bucketInfo">
+                <span class="todoOp"> Operations</span>
+
+                <button ng-click="ctrl.deleteTodo(todo.id)" class="btn btnFirst">Delete</button>
+                <button ng-click="ctrl.changeTodoStatus(todo)" class="btn">{{todo.done ? 'Uncomplete' : 'Complete'}}</button>
+                <button ng-click="ctrl.seeTodoDetails(todo)" class="btn">Details</button>
+                <button ng-click="ctrl.shareTodo(todo)" class="btn">Share</button>
+            </aside>
+    </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/app_ng.js"></script>
+
+</body>
+</html>

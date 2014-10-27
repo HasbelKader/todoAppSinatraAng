@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf8">
+  <title><%= @title + ' | Todo' %></title>
+  <link href="/custom.css" rel="stylesheet">
+  <link href="/index.css" rel="stylesheet">
+</head>
+
+<body ng-app="turntotech">
+<header class="header">
+  <h1><a href="/">TODO LIST</a></h1>
+</header>
+
+<div class="mainDiv" id="main"> <%= yield %>
+</div>
+
+
+<footer class="footer">
+  <p>&copy;TurnToTech Samples</p>
+</footer>
+
+
+<script type="text/javascript" src="/js/app.js"></script>
+</body>
+
+</html>

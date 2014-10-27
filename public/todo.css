@@ -1,0 +1,276 @@
+body {
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: #2b3e50;
+}
+
+.container {
+
+    border-bottom: 5px solid #df691a ;
+   border-radius: 3;
+
+    width: 95%;
+    margin: 10px auto;
+    background:#284651 ;
+    display: flex;
+
+    -webkit-webkit-flex-direction: row;
+    -moz-webkit-flex-direction: row;
+    -ms-webkit-flex-direction: row;
+    -o-webkit-flex-direction: row;
+    webkit-flex-direction: row;
+    flex-direction: row;
+
+
+
+
+
+}
+
+.bucket {
+    background: #ccc;
+    padding: 10px;
+    border: 1px solid #666;
+    width: 70%;
+    margin: 4px;
+    border-radius: 20;
+    box-shadow: #5cb85c;
+
+
+}
+.doneTodo{
+    background-color: #53b876;
+    border-top:4px solid #df691a ;
+}
+.undoneTodo{
+
+    background-color:#f0ad4e ;
+    border-top:4px solid #000000 ;
+}
+
+
+.header{
+
+    background-color: #4e5d6c;
+    height: auto;
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+
+}
+
+.bucketInfo{
+    background: #2b3e50;
+    padding: 5px;
+    border: 1px solid #666;
+    width: 21%;
+    margin: 2px;
+    border-radius: 12;
+
+}
+
+.doneImg{
+
+    width: 27px;
+    height: auto;
+    float:right;
+
+}
+
+.undoneImg{
+
+    width: 42px;
+    height: auto;
+    float:right;
+
+
+}
+.btn{
+    margin-right: 2px;
+
+    margin-bottom: 3px;
+
+    width: 100%;
+    text-decoration:none;
+    text-align:center;
+    padding:5px 3px;
+    border:solid 1px #004F72;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius: 4px;
+
+    font:11px Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color:#004f72;
+    background-color:#3BA4C7;
+    background-image: -moz-linear-gradient(top, #3BA4C7 0%, #1982A5 100%);
+    background-image: -webkit-linear-gradient(top, #3BA4C7 0%, #1982A5 100%);
+    background-image: -o-linear-gradient(top, #3BA4C7 0%, #1982A5 100%);
+    background-image: -ms-linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1982A5', endColorstr='#1982A5',GradientType=0 );
+    background-image: linear-gradient(top, #3BA4C7 0% ,#1982A5 100%);
+    -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+    -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;
+    box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
+
+}
+.btnFirst{
+    margin-top: 5px;
+
+
+}
+
+.btnUp{
+    height: 35px;
+    font-size: 14px;
+    font-family: 'Philosopher', sans-serif;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-top:2px solid #df691a ;
+}
+.todoOp{
+   border-bottom: solid 1px #f0ad4e;
+   color: #31b0d5;
+   font-family: 'Indie Flower', cursive;
+
+}
+.todoTitle{
+    font-family: 'Philosopher', sans-serif;
+    border-bottom: 1px dashed #004f72;
+    color: #ffffff;
+}
+
+.todoBody{
+    font-family: 'Indie Flower', cursive;
+
+}
+.todoShortInfo{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 14px;
+}
+
+.containerUp{
+    padding: 10px;
+    display: flex;
+}
+.jumboTitle{
+
+    font-family: 'Philosopher', sans-serif;
+    margin: 10px;
+    color: #df691a;
+    text-align: center;
+}
+
+.todosContainer{
+
+width: 100%;
+}
+
+.addTodoContainer{
+
+    padding: 10px 10px;
+    margin: 10px 10px;
+
+}
+
+
+@media screen and (min-width: 520px) {
+
+    .todosContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    .container{
+        width: 50%;
+        height: auto;
+
+    }
+
+.todoOp{
+    font-size: 11px;
+
+}
+
+}
+
+
+@media screen and (min-width: 760px) {
+
+    .todosContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    .container{
+        width: 40%;
+        height: 200px;
+
+    }
+
+    .todoOp{
+        font-size: 13px;
+
+    }
+
+}
+
+@media screen and (min-width: 860px) {
+
+    .todosContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    .container{
+        width: 33%;
+        height: 200px;
+
+
+    }
+
+    .todoOp{
+        font-size: 13px;
+
+    }
+
+
+}
+
+
+@media screen and (min-width: 1080px) {
+
+    .todosContainer{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-content: space-around;
+
+    }
+    .container{
+        width: 275px;
+        height: 200px;
+
+
+    }
+
+    .todoOp{
+        font-size: 13px;
+
+    }
+
+
+}
